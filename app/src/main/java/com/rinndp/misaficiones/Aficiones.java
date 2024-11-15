@@ -26,9 +26,9 @@ public class Aficiones extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ElPaginador elPaginador = new ElPaginador(this, getSupportFragmentManager());
+
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(elPaginador);
-
     }
 
     @Override
@@ -42,6 +42,7 @@ public class Aficiones extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.favButton) {
             Toast toast = Toast.makeText(this, "olacaracola", Toast.LENGTH_SHORT);
+            toast.show();
         }
 
         if (id == R.id.aboutMeButton) {
