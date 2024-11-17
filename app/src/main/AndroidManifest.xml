@@ -13,11 +13,15 @@
         android:theme="@style/Base.Theme.MisAficiones"
         tools:targetApi="31">
         <activity
+            android:name=".SobreMi"
+            android:exported="false"
+            android:label="@string/title_activity_sobre_mi"
+            android:theme="@style/Base.Theme.MisAficiones.NoActionBar" />
+        <activity
             android:name=".Aficiones"
             android:exported="true"
             android:label="@string/title_activity_aficiones"
-            android:theme="@style/Base.Theme.MisAficiones" >
-
+            android:theme="@style/Base.Theme.MisAficiones">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,4 +29,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

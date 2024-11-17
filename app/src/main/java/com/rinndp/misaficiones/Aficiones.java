@@ -46,8 +46,8 @@ public class Aficiones extends AppCompatActivity {
         }
 
         if (id == R.id.aboutMeButton) {
-            //Intent intent = new Intent(Aficiones.this, SobreMi.class);
-            //startActivity (intent);
+            Intent intent = new Intent(Aficiones.this, SobreMi.class);
+            startActivity (intent);
         }
 
         if (id == R.id.myCodeButton) {
