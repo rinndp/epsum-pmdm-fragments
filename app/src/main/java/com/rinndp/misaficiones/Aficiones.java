@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,10 +14,12 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.rinndp.misaficiones.databinding.ActivityAficionesBinding;
 import com.rinndp.misaficiones.ui.fragments.ElPaginador;
+import com.rinndp.misaficiones.ui.fragments.ElPaginadorSobreMi;
 
 public class Aficiones extends AppCompatActivity {
 
     private ActivityAficionesBinding binding;
+    ElPaginador elPaginador = new ElPaginador(this, getSupportFragmentManager());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +27,6 @@ public class Aficiones extends AppCompatActivity {
 
         binding = ActivityAficionesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        ElPaginador elPaginador = new ElPaginador(this, getSupportFragmentManager());
 
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(elPaginador);
@@ -40,19 +41,28 @@ public class Aficiones extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        Bundle bundle = new Bundle();
         if (id == R.id.favButton) {
             Toast toast = Toast.makeText(this, "olacaracola", Toast.LENGTH_SHORT);
             toast.show();
+
+            if (elPaginador.getPosition() == 0) {
+
+            } else {
+
+            }
         }
 
         if (id == R.id.aboutMeButton) {
             Intent intent = new Intent(Aficiones.this, SobreMi.class);
+            intent.putExtras(bundle);
             startActivity (intent);
         }
 
         if (id == R.id.myCodeButton) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("https://github.com/rinndp/"));
+
             startActivity(intent);
         }
 

@@ -18,6 +18,7 @@ public class ElPaginadorSobreMi extends FragmentPagerAdapter {
     public ElPaginadorSobreMi(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
+
     }
 
     @NonNull

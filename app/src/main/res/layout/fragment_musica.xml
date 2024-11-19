@@ -3,16 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
+    android:background="#E2E2B0"
     >
 
     <TextView
         android:id="@+id/textoComer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como me gusta a mi comer"
+        android:text="Música"
         android:textSize="30sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

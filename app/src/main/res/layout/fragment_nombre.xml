@@ -10,7 +10,7 @@
         android:id="@+id/textoDormir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mi nombre es Axel"
+        android:text="Mi nombre es Axel Rojas"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"

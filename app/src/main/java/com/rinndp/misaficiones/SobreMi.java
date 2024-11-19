@@ -1,6 +1,8 @@
 package com.rinndp.misaficiones;
 
 import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import com.rinndp.misaficiones.databinding.ActivitySobreMiBinding;
