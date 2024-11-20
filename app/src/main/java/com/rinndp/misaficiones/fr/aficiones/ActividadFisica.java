@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.rinndp.misaficiones.R;
 
-public class Comer extends Fragment {
+public class ActividadFisica extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

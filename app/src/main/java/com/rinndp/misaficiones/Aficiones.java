@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,8 +30,23 @@ public class Aficiones extends AppCompatActivity {
         binding = ActivityAficionesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        Button musicaBoton = findViewById(R.id.musicaBoton);
+
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(elPaginador);
+
+        musicaBoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchTiposMusica();
+            }
+        });
+
+    }
+
+    public void launchTiposMusica() {
+        Intent intentTiposMusica = new Intent(this, TiposMusica.class);
+        startActivity(intentTiposMusica);
     }
 
     @Override

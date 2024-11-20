@@ -13,6 +13,11 @@
         android:theme="@style/Base.Theme.MisAficiones"
         tools:targetApi="31">
         <activity
+            android:name=".TiposMusica"
+            android:exported="false"
+            android:label="@string/title_activity_tipos_musica"
+            android:theme="@style/Base.Theme.MisAficiones.NoActionBar" />
+        <activity
             android:name=".SobreMi"
             android:exported="false"
             android:label="@string/title_activity_sobre_mi"

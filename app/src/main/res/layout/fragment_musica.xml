@@ -7,7 +7,7 @@
     >
 
     <TextView
-        android:id="@+id/textoComer"
+        android:id="@+id/textoMusica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Música"
@@ -17,6 +17,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/musicaBoton"
+        android:layout_width="350px"
+        android:layout_height="200px"
+        app:layout_constraintTop_toBottomOf="@+id/textoMusica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Géneros"
+        android:textSize="20sp"
+        android:backgroundTint="#818181"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

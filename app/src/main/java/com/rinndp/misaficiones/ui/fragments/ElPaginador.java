@@ -2,16 +2,14 @@ package com.rinndp.misaficiones.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.rinndp.misaficiones.R;
-import com.rinndp.misaficiones.fr.aficiones.Comer;
-import com.rinndp.misaficiones.fr.aficiones.Dormir;
+import com.rinndp.misaficiones.fr.aficiones.ActividadFisica;
+import com.rinndp.misaficiones.fr.aficiones.Musica;
 
 
 public class ElPaginador extends FragmentPagerAdapter {
@@ -31,10 +29,10 @@ public class ElPaginador extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 posicion = 0;
-                return new Comer();
+                return new ActividadFisica();
             case 1:
                 posicion = 1;
-                return new Dormir();
+                return new Musica();
             default:
                 return null;
         }
