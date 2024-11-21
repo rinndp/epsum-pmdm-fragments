@@ -25,7 +25,6 @@ public class ElPaginador extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        Bundle bundle = new Bundle();
         switch (position) {
             case 0:
                 posicion = 0;

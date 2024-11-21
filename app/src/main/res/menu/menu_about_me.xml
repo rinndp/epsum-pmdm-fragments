@@ -17,6 +17,5 @@
         android:title="Mi código"
         android:id="@+id/myCodeButton"
         app:showAsAction="never"
-
         />
 </menu>

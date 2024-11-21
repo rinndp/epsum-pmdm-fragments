@@ -1,4 +1,4 @@
-package com.rinndp.misaficiones.ui.main;
+package com.rinndp.misaficiones.ui.fragments;
 
 import android.content.Context;
 
@@ -10,18 +10,20 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.rinndp.misaficiones.R;
 import com.rinndp.misaficiones.fr.aficiones.Musica;
+import com.rinndp.misaficiones.fr.musica.Hyperpop;
+import com.rinndp.misaficiones.fr.musica.Urbano;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class ElPaginadorTiposMusica extends FragmentPagerAdapter {
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public ElPaginadorTiposMusica(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -30,7 +32,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new Musica();
+                return new Hyperpop();
+            case 1:
+                return new Urbano();
             default:
                 return null;
         }
@@ -44,7 +48,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
-        return 1;
+        return 2;
     }
 }
