@@ -47,6 +47,8 @@ public class Aficiones extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.favButton) {
+            Bundle outState = new Bundle();
+            onSaveInstanceState(outState);
             Toast toast = Toast.makeText(this, "El fragment se ha guardado - ID: "+viewPager.getCurrentItem(), Toast.LENGTH_SHORT);
             toast.show();
         }
