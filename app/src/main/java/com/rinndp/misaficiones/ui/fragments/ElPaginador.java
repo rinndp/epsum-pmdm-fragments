@@ -15,7 +15,7 @@ import com.rinndp.misaficiones.fr.aficiones.Musica;
 public class ElPaginador extends FragmentPagerAdapter {
 
     private final Context mContext;
-    private int posicion;
+    private int posicion = 0;
 
     public ElPaginador (Context context, FragmentManager fm) {
         super(fm);
@@ -27,18 +27,12 @@ public class ElPaginador extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                posicion = 0;
                 return new ActividadFisica();
             case 1:
-                posicion = 1;
                 return new Musica();
             default:
                 return null;
         }
-    }
-
-    public int getPosition () {
-        return posicion;
     }
 
     @Override

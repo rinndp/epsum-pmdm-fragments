@@ -6,17 +6,12 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@mipmap/ic_app_aficiones"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_launcher_foreground"
+        android:roundIcon="@mipmap/ic_app_aficiones_round"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.MisAficiones"
         tools:targetApi="31">
-        <activity
-            android:name=".Favoritos"
-            android:exported="false"
-            android:label="@string/title_activity_favorrtios"
-            android:theme="@style/Base.Theme.MisAficiones.NoActionBar" />
         <activity
             android:name=".TiposMusica"
             android:exported="false"

@@ -3,6 +3,7 @@ package com.rinndp.misaficiones;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,8 +23,7 @@ import com.rinndp.misaficiones.ui.fragments.ElPaginadorTiposMusica;
 public class Aficiones extends AppCompatActivity {
 
     private ActivityAficionesBinding binding;
-    ElPaginador elPaginador = new ElPaginador(this, getSupportFragmentManager());
-
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +31,9 @@ public class Aficiones extends AppCompatActivity {
         binding = ActivityAficionesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        ElPaginador elPaginador = new ElPaginador(this, getSupportFragmentManager());
 
-        ViewPager viewPager = binding.viewPager;
+        viewPager = binding.viewPager;
         viewPager.setAdapter(elPaginador);
     }
 
@@ -46,7 +47,7 @@ public class Aficiones extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.favButton) {
-            Toast toast = Toast.makeText(this, "olacaracola", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this, "El fragment se ha guardado - ID: "+viewPager.getCurrentItem(), Toast.LENGTH_SHORT);
             toast.show();
         }
 
@@ -65,4 +66,21 @@ public class Aficiones extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        TextView textViewActividadFisica = findViewById(R.id.textoActividadFisica);
+        TextView textViewMusica = findViewById(R.id.textoMusica);
+        Button buttonMusica = findViewById(R.id.musicaBoton);
+
+        if (viewPager.getCurrentItem() == 0) {
+            outState.putString("textViewGuardado", textViewActividadFisica.getText().toString());
+        } else {
+            outState.putString("textViewGuardado", textViewMusica.getText().toString());
+            outState.putInt("estadoBotonGuardado", buttonMusica.getVisibility());
+        }
+    }
+
 }

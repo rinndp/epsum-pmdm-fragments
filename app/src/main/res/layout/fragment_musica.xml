@@ -31,7 +31,7 @@
         android:textSize="20sp"
         android:fontFamily="sans-serif-light"
         android:textColor="@color/black"
-        android:backgroundTint="#B2B269"
+        android:backgroundTint="#BBA4E2"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
