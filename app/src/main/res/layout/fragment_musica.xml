@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#E2E2B0"
+    android:background="#1E2340"
     >
 
     <TextView
@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="Música"
         android:textSize="30sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +29,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Géneros"
         android:textSize="20sp"
-        android:backgroundTint="#818181"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/black"
+        android:backgroundTint="#B2B269"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
